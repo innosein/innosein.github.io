@@ -1,0 +1,50 @@
+[root@localhost bin]# ./shutdown.sh
+Using CATALINA_BASE:   /usr/local/lib/tomcat
+Using CATALINA_HOME:   /usr/local/lib/tomcat
+Using CATALINA_TMPDIR: /usr/local/lib/tomcat/temp
+Using JRE_HOME:        /usr/java
+Using CLASSPATH:       /usr/local/lib/tomcat/bin/bootstrap.jar:/usr/local/lib/tomcat/bin/tomcat-juli.jar
+Using CATALINA_OPTS:
+7월 16, 2021 9:40:22 오전 org.apache.tomcat.util.digester.Digester fatalError
+심각: [1] 행 [3} 열에서 심각한 파싱 오류 발생
+org.xml.sax.SAXParseException; systemId: file:/usr/local/lib/tomcat/conf/server.xml; lineNumber: 1; columnNumber: 3; 프롤로그에서는 콘텐츠가 허용되지 않습니다.
+        at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+        at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+        at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+        at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+        at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+        at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1009)
+        at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+        at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+        at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+        at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+        at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+        at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+        at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:644)
+        at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+        at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:642)
+        at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:673)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+        at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+
+7월 16, 2021 9:40:22 오전 org.apache.catalina.startup.Catalina parseServerXml
+경고: [/usr/local/lib/tomcat/conf/server.xml](으)로부터 서버 설정을 로드할 수 없습니다.
+org.xml.sax.SAXParseException; systemId: file:/usr/local/lib/tomcat/conf/server.xml; lineNumber: 1; columnNumber: 3; 프롤로그에서는 콘텐츠가 허용되지 않습니다.
+        at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1243)
+        at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:644)
+        at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1522)
+        at org.apache.catalina.startup.Catalina.parseServerXml(Catalina.java:642)
+        at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:673)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+        at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+
+7월 16, 2021 9:40:22 오전 org.apache.catalina.startup.Catalina stopServer
+심각: Catalina를 중지시키는 중 오류 발생
